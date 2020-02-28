@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="issues">
+    <option name="index">
+      <map>
+        <entry key="$PROJECT_DIR$/day01_custom_mybatis/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/day01_custom_mybatis/src/main/java/com/envision/config/Configuration.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/day01_custom_mybatis/src/main/java/com/envision/mybatis/config/Configuration.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/day01_custom_mybatis/src/main/java/com/envision/mybatis/config/Mapper.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/day01_custom_mybatis/src/main/java/com/envision/mybatis/io/Resource.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/day01_custom_mybatis/src/main/java/com/envision/mybatis/io/Resources.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/day01_custom_mybatis/src/main/java/com/envision/mybatis/proxy/MapperProxy.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/day01_custom_mybatis/src/main/java/com/envision/mybatis/session/SqlSession.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/day01_custom_mybatis/src/main/java/com/envision/mybatis/session/SqlSessionFactory.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/day01_custom_mybatis/src/main/java/com/envision/mybatis/session/SqlSessionFactoryBuilder.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/day01_custom_mybatis/src/main/java/com/envision/mybatis/session/impl/DefaultSqlSession.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/day01_custom_mybatis/src/main/java/com/envision/mybatis/session/impl/DefaultSqlSessionFactory.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/day01_custom_mybatis/src/main/java/com/envision/utils/DataSourceUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/day01_custom_mybatis/src/main/java/com/envision/utils/Executor.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/day01_custom_mybatis/src/main/java/com/envision/utils/XMLConfigBuilder.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/day01_custom_mybatis/src/main/resources/SqlMapConfig.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/day01_custom_mybatis/src/main/resources/com/envision/dao/IUserDao.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/day01_custom_mybatis/src/test/java/com/envison/MybatisTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/day01_mybatis/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/day01_mybatis/src/main/resources/log4j.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

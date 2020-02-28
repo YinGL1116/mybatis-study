@@ -10,13 +10,10 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>day01_mybatis</module>
+        <module>day01_custom_mybatis</module>
     </modules>
     <dependencies>
-        <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis</artifactId>
-            <version>3.4.5</version>
-        </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
