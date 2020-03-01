@@ -11,6 +11,9 @@
     <modules>
         <module>day01_mybatis</module>
         <module>day01_custom_mybatis</module>
+        <module>day02_mybatis_crud</module>
+        <module>day02_mybatis_crud</module>
+        <module>day02_test</module>
     </modules>
     <dependencies>
 

@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/day01_custom_mybatis/day01_custom_mybatis.iml" filepath="$PROJECT_DIR$/day01_custom_mybatis/day01_custom_mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/day01_mybatis/day01_mybatis.iml" filepath="$PROJECT_DIR$/day01_mybatis/day01_mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day02_mybatis_crud/day02_mybatis_crud.iml" filepath="$PROJECT_DIR$/day02_mybatis_crud/day02_mybatis_crud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day02_test/day02_test.iml" filepath="$PROJECT_DIR$/day02_test/day02_test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/mybatis-study.iml" filepath="$PROJECT_DIR$/.idea/mybatis-study.iml" />
     </modules>
   </component>
