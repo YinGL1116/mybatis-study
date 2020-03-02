@@ -1,6 +1,8 @@
 package com.envison;
 
+import com.envision.dao.IAccountDao;
 import com.envision.dao.IUserDao;
+import com.envision.domain.Account;
 import com.envision.domain.User;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -19,6 +21,7 @@ public class MybatisTest {
     private InputStream in;
     private SqlSession sqlSession;
     private IUserDao userDao;
+    private IAccountDao accountDao;
 
     @Before
     public void init() throws Exception{
@@ -27,10 +30,14 @@ public class MybatisTest {
         SqlSessionFactory factory = builder.build(in);
         sqlSession = factory.openSession();
         userDao = sqlSession.getMapper(IUserDao.class);
+        accountDao = sqlSession.getMapper(IAccountDao.class);
+
     }
 
     @After
     public void destroy() throws Exception{
+        //自动提交 auto commit 默认是false 所以没办法持久化 必须手动commit
+        sqlSession.commit();
         in.close();
         sqlSession.close();
     }
@@ -51,14 +58,41 @@ public class MybatisTest {
     @Test
     public void saveTest() {
         User user = new User();
-        user.setUsername("save_test");
+        user.setUsername("save_test_last");
         user.setAddress("shanghai");
         user.setSex("男");
         user.setBirthday(new Date());
-
+        //保存前 注意id
+        System.out.println(user);
         userDao.save(user);
-        //自动提交 auto commit 默认是false 所以没办法持久化 必须手动commit
-        sqlSession.commit();
+        //保存后 注意id
+        System.out.println(user);
+
+
+    }
+
+    @Test
+    public void deleteTest() {
+        userDao.deleteById(52);
+
+    }
+
+    @Test
+    public void findByNameTest() {
+        List<User> users = userDao.findByName("%王%");
+        System.out.println(users);
+    }
+
+    @Test
+    public void countSexTest() {
+        int number = userDao.countSex("男");
+        System.out.println(number);
+    }
+
+    @Test
+    public void accountFindAllTest() {
+        List<Account> accounts = accountDao.findAll();
+        System.out.println(accounts);
     }
 
 

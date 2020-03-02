@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--命名空间不可缺少！-->
+<mapper namespace="com.envision.dao.IAccountDao">
+
+    <resultMap id="accountMap" type="com.envision.domain.Account">
+        <id property="accountId" column="id"/>
+        <result property="accountName" column="name"/>
+        <result property="accountMoney" column="money"/>
+    </resultMap>
+
+    <select id="findAll" resultMap="accountMap">
+        select * from account;
+    </select>
+
+</mapper>

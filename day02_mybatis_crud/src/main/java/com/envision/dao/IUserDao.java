@@ -12,4 +12,9 @@ public interface IUserDao {
 
     void save(User user);
 
+    void deleteById(int id);
+
+    List<User> findByName(String name);
+
+    int countSex(String sex);
 }
