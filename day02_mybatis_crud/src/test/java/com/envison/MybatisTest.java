@@ -3,6 +3,7 @@ package com.envison;
 import com.envision.dao.IAccountDao;
 import com.envision.dao.IUserDao;
 import com.envision.domain.Account;
+import com.envision.domain.QueryVo;
 import com.envision.domain.User;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -92,7 +93,27 @@ public class MybatisTest {
     @Test
     public void accountFindAllTest() {
         List<Account> accounts = accountDao.findAll();
-        System.out.println(accounts);
+        accounts.forEach(System.out::println);
+    }
+
+    @Test
+    public void findByVoTest() {
+        User user = new User();
+        user.setUsername("老王");
+        QueryVo vo = new QueryVo();
+        vo.setUser(user);
+
+        List<User> users = userDao.findByVo(vo);
+        users.forEach(System.out::println);
+    }
+
+    @Test
+    public void findByConditionTest() {
+        QueryVo vo = new QueryVo();
+        //vo.setName("老王");
+
+        List<User> users = userDao.findByCondition(vo);
+        users.forEach(System.out::println);
     }
 
 

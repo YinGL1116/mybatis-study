@@ -3,6 +3,10 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+    <typeAliases >
+        <typeAlias type="com.envision.domain.User" alias="user"/>
+        <typeAlias type="com.envision.domain.QueryVo" alias="queryVo"/>
+    </typeAliases>
     <environments default="mysql">
         <environment id="mysql">
             <transactionManager type="JDBC"/>
@@ -16,7 +20,11 @@
     </environments>
     <!--环境配置完了 还要指定映射配置文件的位置 注意写法  映射配置文件指的是每个dao文件对应的配置文件-->
     <mappers>
+        <!--
         <mapper resource="com/envision/dao/IUserDao.xml"/>
         <mapper resource="com/envision/dao/IAccountDao.xml"/>
+        -->
+        <!--此种方法要求mapper接口名称和mapper映射文件名称相同，且放在同一个目录中。-->
+        <package name="com.envision.dao"/>
     </mappers>
 </configuration>

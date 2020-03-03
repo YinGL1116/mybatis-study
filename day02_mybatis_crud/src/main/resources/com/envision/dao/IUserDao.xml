@@ -37,4 +37,17 @@
     <select id="countSex" parameterType="String" resultType="int">
         select count(*) from user where sex=#{sexxxxx};
     </select>
+
+    <select id="findByVo" parameterType="com.envision.domain.QueryVo" resultType="com.envision.domain.User">
+        select * from user where username=#{user.username}
+    </select>
+
+
+    <select id="findByCondition" parameterType="queryVo" resultType="user">
+        select * from user where 1=1
+        <if test="name != null">
+            and username=#{name}
+        </if>
+    </select>
+
 </mapper>
