@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--命名空间不可缺少！-->
+<mapper namespace="com.envision.dao.IAccountDao">
+    <resultMap id="accountMap" type="account">
+        <id column="aid" property="id"/>
+        <result column="uid" property="uid"/>
+        <result column="money" property="money"/>
+        <association property="user" javaType="user"><!-- 这里不用加column可以-->
+            <id column="id" property="id"/>
+            <result column="address" property="address"/>
+            <result column="username" property="username"/>
+            <result column="birthday" property="birthday"/>
+            <result column="sex" property="sex"/>
+        </association>
+
+    </resultMap>
+
+
+
+    <select id="findAll" resultMap="accountMap">
+        <!-- select * from account; -->
+        select account.id as aid, account.uid, account.money,user.* from account, user where account.uid=user.id
+    </select>
+
+    <!-- 这个方法极少使用 仅示例-->
+    <select id="findAllAccount" resultType="accountUser">
+        select account.*,user.username,user.address from account,user where account.uid=user.id
+    </select>
+
+</mapper>

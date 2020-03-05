@@ -9,6 +9,7 @@
         <module name="day01_custom_mybatis" />
         <module name="day02_mybatis_crud" />
         <module name="day01_mybatis" />
+        <module name="day03_one2many" />
         <module name="day02_test" />
       </profile>
     </annotationProcessing>
@@ -17,6 +18,7 @@
       <module name="day01_mybatis" target="1.8" />
       <module name="day02_mybatis_crud" target="1.8" />
       <module name="day02_test" target="1.8" />
+      <module name="day03_one2many" target="1.8" />
       <module name="mybatis-study" target="1.8" />
     </bytecodeTargetLevel>
   </component>
