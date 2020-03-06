@@ -15,7 +15,19 @@ public class User {
 
     //一对多
     //主表实体应该包含所对应的从表实体的集合引用
-    List<Account> accounts = new ArrayList<>();
+    private List<Account> accounts = new ArrayList<>();
+
+    //多对多
+    //一个表的实体中应包含另一个表实体的集合引用
+    private List<Role> roles = new ArrayList<>();
+
+    public List<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<Role> roles) {
+        this.roles = roles;
+    }
 
     public List<Account> getAccounts() {
         return accounts;

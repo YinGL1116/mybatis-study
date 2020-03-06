@@ -1,11 +1,9 @@
 package com.envison;
 
 import com.envision.dao.IAccountDao;
+import com.envision.dao.IRoleDao;
 import com.envision.dao.IUserDao;
-import com.envision.domain.Account;
-import com.envision.domain.AccountUser;
-import com.envision.domain.QueryVo;
-import com.envision.domain.User;
+import com.envision.domain.*;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -24,6 +22,7 @@ public class MybatisTest {
     private SqlSession sqlSession;
     private IUserDao userDao;
     private IAccountDao accountDao;
+    private IRoleDao roleDao;
 
     @Before
     public void init() throws Exception{
@@ -33,6 +32,8 @@ public class MybatisTest {
         sqlSession = factory.openSession();
         userDao = sqlSession.getMapper(IUserDao.class);
         accountDao = sqlSession.getMapper(IAccountDao.class);
+        roleDao = sqlSession.getMapper(IRoleDao.class);
+
 
     }
 
@@ -48,7 +49,13 @@ public class MybatisTest {
     public void findAllTest() {
 
         List<User> users = userDao.findAll();
-        users.forEach(System.out::println);
+        users.forEach(user -> {
+            System.out.println("------------------");
+            System.out.println(user);
+            System.out.println(user.getAccounts());
+            System.out.println(user.getRoles());
+            System.out.println("------------------");
+        });
     }
 
     @Test
@@ -75,6 +82,16 @@ public class MybatisTest {
         });
     }
 
+    @Test
+    public void findAllRoleTest() {
+        List<Role> roles = roleDao.findAll();
+        roles.forEach(role -> {
+            System.out.println("------------------");
+            System.out.println(role);
+            System.out.println(role.getUsers());
+            System.out.println("------------------");
+        });
+    }
 
 
 }

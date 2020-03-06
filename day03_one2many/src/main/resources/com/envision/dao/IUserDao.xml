@@ -22,9 +22,17 @@
             <result column="uid" property="uid"/>
             <result column="money" property="money"/>
         </collection>
+        <collection property="roles" ofType="role">
+            <id column="rid" property="id"/>
+            <result column="role_name" property="roleName"/>
+            <result column="role_desc" property="roleDesc"/>
+        </collection>
     </resultMap>
     <select id="findAll" resultMap="userAccountMap">
-        select *,a.id aid from user u left outer join account a on u.id=a.uid
+        select u.*,a.id aid,a.uid,a.money,r.*,r.id rid from user u
+         left outer join account a on u.id=a.uid
+         left outer join user_role ur on u.id=ur.uid
+         left outer join role r on r.id=rid
     </select>
 
     <!-- 入参是基本数据类型 名字可以随便写 -->

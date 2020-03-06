@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--命名空间不可缺少！-->
+<mapper namespace="com.envision.dao.IRoleDao">
+    <resultMap id="roleMap" type="role">
+        <id column="id" property="id"/>
+        <result column="role_name" property="roleName"/>
+        <result column="role_desc" property="roleDesc"/>
+
+        <collection property="users" ofType="user">
+            <id column="uid" property="id"/>
+            <result column="address" property="address"/>
+            <result column="username" property="username"/>
+            <result column="birthday" property="birthday"/>
+            <result column="sex" property="sex"/>
+        </collection>
+    </resultMap>
+
+
+    <select id="findAll" resultMap="roleMap">
+        select r.*,u.*,u.id uid from role r left outer join user_role ur on r.id=rid left outer join user u on u.id=uid
+    </select>
+</mapper>
