@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="day01_mybatis" />
         <module name="day02_test" />
+        <module name="day04_anno" />
         <module name="day01_custom_mybatis" />
         <module name="day03_fetchlazy" />
         <module name="day02_mybatis_crud" />
@@ -21,6 +22,7 @@
       <module name="day02_test" target="1.8" />
       <module name="day03_fetchlazy" target="1.8" />
       <module name="day03_one2many" target="1.8" />
+      <module name="day04_anno" target="1.8" />
       <module name="mybatis-study" target="1.8" />
     </bytecodeTargetLevel>
   </component>

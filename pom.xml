@@ -16,6 +16,7 @@
         <module>day02_test</module>
         <module>day03_one2many</module>
         <module>day03_fetchlazy</module>
+        <module>day04_anno</module>
     </modules>
     <dependencies>
 
