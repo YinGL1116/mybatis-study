@@ -15,6 +15,7 @@
         <module>day02_mybatis_crud</module>
         <module>day02_test</module>
         <module>day03_one2many</module>
+        <module>day03_fetchlazy</module>
     </modules>
     <dependencies>
 

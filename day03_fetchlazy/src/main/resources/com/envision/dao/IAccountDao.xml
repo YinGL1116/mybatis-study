@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--命名空间不可缺少！-->
+<mapper namespace="com.envision.dao.IAccountDao">
+    <resultMap id="accountMap" type="account">
+        <id column="aid" property="id"/>
+        <result column="uid" property="uid"/>
+        <result column="money" property="money"/>
+        <!--  如果采用延迟加载的方式 这样外连接不合适
+        <association property="user" javaType="user">
+            <id column="id" property="id"/>
+            <result column="address" property="address"/>
+            <result column="username" property="username"/>
+            <result column="birthday" property="birthday"/>
+            <result column="sex" property="sex"/>
+        </association>
+        -->
+        <association property="user" column="uid" javaType="user" select="com.envision.dao.IUserDao.findById"/>
+
+    </resultMap>
+
+
+
+    <select id="findAll" resultMap="accountMap">
+        <!-- select * from account; -->
+        <!--select account.id as aid, account.uid, account.money,user.* from account, user where account.uid=user.id-->
+        select * from account
+    </select>
+
+    <!-- 这个方法极少使用 仅示例-->
+    <select id="findAllAccount" resultType="accountUser">
+        select account.*,user.username,user.address from account,user where account.uid=user.id
+    </select>
+
+    <select id="findAccountsByUserId" parameterType="int" resultType="account">
+        select * from account a join user u on a.uid=u.id where u.id=#{uid}
+    </select>
+
+</mapper>
