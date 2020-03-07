@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--命名空间不可缺少！-->
 <mapper namespace="com.envision.dao.IUserDao">
-
+    <cache/>
     <!-- 同时查询到每个user对应的account（可能多个可能无）-->
     <!--
     <select id="findAll" resultType="com.envision.domain.User">

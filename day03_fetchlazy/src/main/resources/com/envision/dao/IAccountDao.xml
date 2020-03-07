@@ -4,6 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--命名空间不可缺少！-->
 <mapper namespace="com.envision.dao.IAccountDao">
+    <cache/>
     <resultMap id="accountMap" type="account">
         <id column="aid" property="id"/>
         <result column="uid" property="uid"/>

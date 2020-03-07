@@ -4,6 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--命名空间不可缺少！-->
 <mapper namespace="com.envision.dao.IRoleDao">
+    <cache/>
     <resultMap id="roleMap" type="role">
         <id column="id" property="id"/>
         <result column="role_name" property="roleName"/>

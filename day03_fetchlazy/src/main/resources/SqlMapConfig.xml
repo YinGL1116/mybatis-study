@@ -6,6 +6,8 @@
     <settings>
         <setting name="lazyLoadingEnabled" value="true"/>
         <setting name="aggressiveLazyLoading" value="false"/>
+        <!-- 开启二级缓存支持（默认开启） 注意 要缓存的类必须实现序列化接口 Serializable-->
+        <setting name="cacheEnabled" value="true"/>
     </settings>
     <typeAliases >
         <!--
