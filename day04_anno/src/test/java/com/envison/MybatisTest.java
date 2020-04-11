@@ -87,5 +87,14 @@ public class MybatisTest {
         });
     }
 
+    @Test
+    public void findByVo() {
+        QueryVo vo = new QueryVo();
+        vo.setUsername("老王");
+        vo.setSex("男");
+        User user = userDao.findByUsernameAndSex(vo);
+        System.out.println(user);
+    }
+
 
 }
